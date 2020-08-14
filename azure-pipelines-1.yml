@@ -26,7 +26,7 @@ stages:
           echo 'Hello world '
 - stage: Second
   jobs:
-  - job: 'Three'
+  - job: 'One'
     steps:
     - task: Bash@3
       inputs:
@@ -34,7 +34,7 @@ stages:
         script: |
           # Write your commands here
           echo 'Hello world'
-  - job: 'Four'
+  - job: 'Two'
     dependsOn: 'Three'
     pool: server
     steps:
